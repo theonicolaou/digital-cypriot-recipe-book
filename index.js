@@ -1,6 +1,7 @@
 var app = new Vue({ 
-    el: '#app',
+    el: '#vue-hello-world-app',
     data: {
-        message: 'Hello Vue!'
+        greeting: 'Nice to see you',
+        person: 'Bruce'
     }
 });
