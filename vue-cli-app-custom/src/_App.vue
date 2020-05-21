@@ -1,27 +1,12 @@
 <template>
   <div id="app">
-    This is the App View
-    <Header/>
-    <MainColumn/>
-    <Footer/>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/abouttttttt">About</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-// @ is an alias to /src
-import Header from '@/views/AppHeader.vue'
-import MainColumn from '@/views/MainColumn.vue'
-import Footer from '@/views/AppFooter.vue'
-
-export default {
-  name: 'app',
-  components: {
-    Header,
-    MainColumn,
-    Footer
-  }
-}
-</script>
 
 <style lang="scss">
 #app {
@@ -30,7 +15,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #ff0066;
 }
 
 #nav {
