@@ -1,0 +1,18 @@
+{
+	"recipes": [
+		{
+			"id": 0,
+			"recipeName": "Recipe 1",
+			"ingredients": ["Recipe 1, Ingredient 1", "Recipe 1, Ingredient 2"],
+			"utensils": ["Recipe 1, Utensil 1", "Recipe 1, Utensil 2"],
+			"method": ["Recipe 1, Method step 1", "Recipe 1, Method step 2"]
+		},
+		{
+			"id": 1,
+			"recipeName": "Recipe 2",
+			"ingredients": ["Recipe 2, Ingredient 1", "Recipe 2, Ingredient 2"],
+			"utensils": ["Recipe 2, Utensil 1", "Recipe 2, Utensil 2"],
+			"method": ["Recipe 2, Method step 1", "Recipe 2, Method step 2"]
+		}
+	]
+}
