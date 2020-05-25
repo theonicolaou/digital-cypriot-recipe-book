@@ -2,6 +2,7 @@
 	"recipes": [
 		{
 			"id": 0,
+			"url": "/recipe1",
 			"recipeName": "Recipe 1",
 			"ingredients": ["Recipe 1, Ingredient 1", "Recipe 1, Ingredient 2"],
 			"utensils": ["Recipe 1, Utensil 1", "Recipe 1, Utensil 2"],
@@ -9,6 +10,7 @@
 		},
 		{
 			"id": 1,
+			"url": "/recipe2",
 			"recipeName": "Recipe 2",
 			"ingredients": ["Recipe 2, Ingredient 1", "Recipe 2, Ingredient 2"],
 			"utensils": ["Recipe 2, Utensil 1", "Recipe 2, Utensil 2"],
