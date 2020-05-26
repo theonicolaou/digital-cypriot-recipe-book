@@ -1,5 +1,5 @@
 <template>
-  <div class="recipes">
+  <div class="recipe-utensils">
     <h2>Utensils:</h2>
     <ul>
       <li v-for="recipe in recipeData.recipes" v-bind:key="recipe.id">
