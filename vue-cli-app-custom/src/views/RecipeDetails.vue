@@ -2,28 +2,28 @@
   <div class="recipes">
     <h1>This is recipeDetails View, within maincolumn, but with a different background colour just to show</h1>
     <div>
-      <!-- <RecipeIntro v-for="recipe in recipeData.recipes" v-bind:key="recipe.id" v-bind:recipeName="recipe.recipeName"/> -->
+      <RecipeIntro :recipe="recipe"/>
       <RecipeIngredients :recipe="recipe"/>
-<!--       <RecipeUtensils/>
-      <RecipeMethod/> -->
+      <RecipeUtensils :recipe="recipe"/>
+      <RecipeMethod :recipe="recipe"/>
     </div>
   </div>
 </template>
 
 <script>
 import recipeData from '../json/data.json'
-// import RecipeIntro from '@/components/RecipeIntro.vue'
+import RecipeIntro from '@/components/RecipeIntro.vue'
 import RecipeIngredients from '@/components/RecipeIngredients.vue'
-// import RecipeUtensils from '@/components/RecipeUtensils.vue'
-// import RecipeMethod from '@/components/RecipeMethod.vue'
+import RecipeUtensils from '@/components/RecipeUtensils.vue'
+import RecipeMethod from '@/components/RecipeMethod.vue'
 
 export default {
   name: 'RecipeDetails',
   components: {
-    // RecipeIntro
-    RecipeIngredients
-    // RecipeUtensils,
-    // RecipeMethod
+    RecipeIntro,
+    RecipeIngredients,
+    RecipeUtensils,
+    RecipeMethod
   },
 
   data() {
@@ -34,7 +34,7 @@ export default {
 
   computed: {
     recipe() {
-      return this.recipeData.recipes.find(recipe => recipe.url === this.$route)
+      return this.recipeData.recipes.find(recipe => recipe.url === this.$route.params.recipeName)
     }
   }
 }

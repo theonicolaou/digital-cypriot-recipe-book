@@ -1,27 +1,23 @@
 <template>
   <div class="recipe-intro">
-    <!-- <div v-for="recipe in recipeData.recipes" v-bind:key="recipe.id"> -->
-      <h2>{{ recipe.recipeName }}</h2>
-      <ul>
-        <li>
-          (ID: {{ recipe.id }}, URL: {{ recipe.url }})
-        </li>
-      </ul>
-    <!-- </div> -->
+    <h2>{{ recipe.recipeName }}</h2>
+    <ul>
+      <li>
+        (ID: {{ recipe.id }}, URL: {{ recipe.url }})
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-  import recipeData from '../json/data.json'
-
   export default {
     name: 'RecipeIntro',
 
-    data() {
-     return {
-       recipeData
-     }
-   },
- }
-
+    props: {
+      recipe: {
+        required: true,
+        type: Object
+      }
+    }
+  }
 </script>
