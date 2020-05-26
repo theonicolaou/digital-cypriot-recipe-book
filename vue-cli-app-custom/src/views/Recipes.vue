@@ -1,14 +1,14 @@
 <template>
   <div class="recipes">
-  <h1>This is the recipes View, within maincolumn, but with a different background colour just to show</h1>
-    <h2>Recipe names:</h2>
+  <h1>This is the recipes View (soon to be RecipesList), within maincolumn, but with a different background colour just to show</h1>
+    <h2>Recipes:</h2>
     <ul>
       <li v-for="recipe in recipeData.recipes" v-bind:key="recipe.id">
-        {{ recipe.recipeName }} (ID: {{ recipe.id }}, URL: {{ recipe.url }})
+        <a :href="`#/recipes/${recipe.url}`">{{ recipe.recipeName }}</a> (ID: {{ recipe.id }}, URL: {{ recipe.url }})
       </li>
     </ul>
 
-    <h2>Ingredients:</h2>
+    <!-- <h2>Ingredients:</h2>
     <ul>
       <li v-for="recipe in recipeData.recipes" v-bind:key="recipe.id">
         {{ recipe.ingredients }}
@@ -27,7 +27,7 @@
       <li v-for="recipe in recipeData.recipes" v-bind:key="recipe.id">
         {{ recipe.method }}
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
