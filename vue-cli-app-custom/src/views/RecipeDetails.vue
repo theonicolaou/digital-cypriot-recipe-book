@@ -1,10 +1,12 @@
 <template>
   <div class="recipes">
     <h1>This is recipeDetails View, within maincolumn, but with a different background colour just to show</h1>
-      <RecipeIntro/>
+    <div>
+      <RecipeIntro v-for="recipe in recipeData.recipes" v-bind:key="recipe.id" v-bind:recipeName="recipe.recipeName"/>
       <RecipeIngredients/>
       <RecipeUtensils/>
       <RecipeMethod/>
+    </div>
   </div>
 </template>
 
@@ -27,7 +29,6 @@ export default {
   data() {
     return {
       recipeData
-      // recipeURL: this.$route.params.id
     }
   }
 }
@@ -37,5 +38,6 @@ export default {
 <style scoped lang="scss">
 .recipes {
   background-color: #cccccc;
+  border-top: 1px solid #000000;
 }
 </style>
