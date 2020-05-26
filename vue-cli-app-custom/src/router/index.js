@@ -17,6 +17,7 @@ const routes = [
   {
     path: '/recipes/:recipeName',
     name: 'RecipeDetails',
+    props: true,
     component: () => import('../views/RecipeDetails.vue')
   }
 ]
