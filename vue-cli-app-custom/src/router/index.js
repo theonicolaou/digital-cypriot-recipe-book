@@ -11,11 +11,12 @@ const routes = [
   },
   {
     path: '/recipes',
-    name: 'Recipes',
+    name: 'RecipesList',
     component: () => import('../views/Recipes.vue')
   },
   {
     path: '/recipes/:recipeName',
+    name: 'RecipeDetails',
     component: () => import('../views/RecipeDetails.vue')
   }
 ]
