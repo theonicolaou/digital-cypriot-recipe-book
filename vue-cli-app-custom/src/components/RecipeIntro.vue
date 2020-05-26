@@ -1,13 +1,13 @@
 <template>
   <div class="recipe-intro">
-    <div v-for="recipe in recipeData.recipes" v-bind:key="recipe.id">
+    <!-- <div v-for="recipe in recipeData.recipes" v-bind:key="recipe.id"> -->
       <h2>{{ recipe.recipeName }}</h2>
       <ul>
         <li>
           (ID: {{ recipe.id }}, URL: {{ recipe.url }})
         </li>
       </ul>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -21,7 +21,7 @@
      return {
        recipeData
      }
-   }
+   },
  }
 
 </script>
